@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,23 +13,79 @@
 
    </head>
 
+   
 
    <body id="css-zen-garden">
-   <h1>CSS Zen Garden</h1>
-   <p> dfsldfkdsjaf </p>
-   <header role="banner">
-			<h1>CSS Zen Garden</h1>
-			<h2>The Beauty of <abbr title="Cascading Style Sheets">CSS</abbr> Design</h2>
-		</header>
-
-   <div class="page-wrapper">
-
-	<section class="intro" id="zen-intro">
+   <ul id="nav">
+      <li><a href="#">The Ballot's In: The Effects of Voter ID Laws on Voter Turnout and Registration</a></li>
+      <li><a href="#About">About</a></li>
+      <li><a href="#">Our Products</a></li>
+      <li><a href="#">FAQs</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Login</a></li>
+   </ul>             
+   <script src="http://d3js.org/d3.v3.min.js"></script>
+   <script src="http://d3js.org/topojson.v1.min.js"></script>
+   <script src="/datamaps.usa.min.js"></script>
+   <div id="container" style="position: relative; width: 500px; height: 300px;"></div>
+   <script>
+    var map = new Datamap({element: document.getElementById('container')});
+   </script>
+   	<section class="intro" id="zen-intro">
 		<header role="banner">
 			<h1>CSS Zen Garden</h1>
 			<h2>The Beauty of <abbr title="Cascading Style Sheets">CSS</abbr> Design</h2>
 		</header>
 
+		<div class="summary" id="zen-summary" role="article">
+			<p>A demonstration of what can be accomplished through <abbr title="Cascading Style Sheets">CSS</abbr>-based design. Select any style sheet from the list to load it into this page.</p>
+			<p>Download the example <a href="/examples/index" title="This page's source HTML code, not to be modified.">html file</a> and <a href="/examples/style.css" title="This page's sample CSS, the file you may modify.">css file</a></p>
+		</div>
+
+		<div class="preamble" id="zen-preamble" role="article">
+			<h3>The Road to Enlightenment</h3>
+			<p>Littering a dark and dreary road lay the past relics of browser-specific tags, incompatible <abbr title="Document Object Model">DOM</abbr>s, broken <abbr title="Cascading Style Sheets">CSS</abbr> support, and abandoned browsers.</p>
+			<p>We must clear the mind of the past. Web enlightenment has been achieved thanks to the tireless efforts of folk like the <abbr title="World Wide Web Consortium">W3C</abbr>, <abbr title="Web Standards Project">WaSP</abbr>, and the major browser creators.</p>
+			<p>The CSS Zen Garden invites you to relax and meditate on the important lessons of the masters. Begin to see with clarity. Learn to use the time-honored techniques in new and invigorating fashion. Become one with the web.</p>
+		</div>
+	</section>
+    <h2> Who cares? </h2>
+    <p>
+    	In the past few years, voter identification laws have become a contentious topic. Proponents say that they protect the voting process, while opponents say they depress turnout, especially among minority groups. However, there has been an abscence of hard data on the topic.   Which is why our project is important.
+    </p>
+    <img src="web_images/Voter-ID.jpg" style="width:304px;height:228px">
+    <h2> Types of voter ID laws </h2>
+    <p>
+    	It turns out not all voter id laws are created equal. Some, “non-strict laws”, have provisions that sometimes allow voters without identification to cast ballots. Others, with “strict laws”, do not. We scoured the internet to find information on when states implemented these laws.
+    </p>
+    <img src="web_images/images.jpg" style="width:304px;height:228px">
+    <h2> How we did it </h2>
+    <p>
+    	Our project had one major goal: to investigate the relationship between voter turnout and the existence of voter ID laws on a statewide level. We worked with the hypothesis that voter ID laws might impact members of various ethnic groups differently, so we began our analysis by looking at historical turnout data for elections from 2002 to 2012. 
+    </p>
+    <h2> Voter laws and turnout by state and race </h2>
+    <p>
+    	We looked at the effect of voter ID laws implemented between 2002 and 2012 for all 50 states.   Our visualization for the effect on Alabama is below, with the vertical black line representing a strict voter ID law implemented in 2005.  
+    </p>
+	<img src="web_images/Graph6.png" style="width:304px">
+
+    <h2> Competitiveness </h2>
+    <p>
+    	In addition, we found information on how competitive elections typically are in various states. More competitive elections can increase turnout, independent of voter ID laws.  We visualized this here:
+    </p>
+    <img src="pics/4thgraph.jpg" style="width:304px">
+
+    <h2> Predictive model </h2>
+    <p>
+    	Using a method called difference-in-differences, we were able to predict the average deviation in voter turnout from the average, after a state implements a strict or non strict voter ID law.  We found that voter turnout tends to decrease slightly after a law is implemented.
+    </p>
+	<img src="pics/3rdgraph.jpg" style="width:304px">
+
+    <h2> North Dakota, Mississippi, and Texas </h2>
+    <p> We used our model to predict voter turnout in North Dakota, Mississippi, and Texas 2014 elections, all 3 of which have recently implemented voter ID laws in the past 2 years.  We compared our predictions to actual turnout data.   While overall turnout data has been released, turnout data for each ethnic group has not, so we were not able to compare those results with our predictions.    In Mississippi and Texas, we were within 2 percentage points using this analysis alone, though our prediction was off for North Dakota.  (We note that North Dakota was also an outlier in this year’s election cycle, with the second to highest voter turnout rate.)
+    </p>
+    <img src="web_images/images-2.jpg" style="width:400px">
+    </html>
    </body>
 
 </html>
