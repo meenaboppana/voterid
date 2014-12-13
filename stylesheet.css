@@ -30,7 +30,7 @@ img {
 	text-align: center;
         }
 h3 { 
-	font: italic normal 1.4em georgia, sans-serif;
+	font-family: 'SaniTrixieSansRegular';
 	letter-spacing: 1px; 
 	margin-bottom: 0; 
 	color: #7D775C;
@@ -63,8 +63,8 @@ abbr {
 	}
 
 .intro {
-	background: url('polit.jpg') no-repeat top left; 
-	min-width: 470px;
+	background: url('crowd2.jpg') no-repeat top left; 
+	min-width: 600px;
 	width: 100%;
 	}
 
@@ -142,4 +142,5 @@ header {
 
 .main h2 {
 	   padding-top: 45px;
+	   margin-bottom: 2;
 
